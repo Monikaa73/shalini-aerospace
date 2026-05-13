@@ -72,14 +72,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Shalini Portfolio" },
+      { name: "description", content: "erospace Engineer Shalini Kumar | B.Tech Graduate specializing in UAV Design, Hybrid VTOL systems, CubeSat technology, and propulsion. Explore projects in aircr" },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Shalini Portfolio" },
+      { property: "og:description", content: "erospace Engineer Shalini Kumar | B.Tech Graduate specializing in UAV Design, Hybrid VTOL systems, CubeSat technology, and propulsion. Explore projects in aircr" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Shalini Portfolio" },
+      { name: "twitter:description", content: "erospace Engineer Shalini Kumar | B.Tech Graduate specializing in UAV Design, Hybrid VTOL systems, CubeSat technology, and propulsion. Explore projects in aircr" },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/IOS6PiQWcMX4BQWuVeWNuS5G0KF2/social-images/social-1778616584032-IMG-20251214-WA0021.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/IOS6PiQWcMX4BQWuVeWNuS5G0KF2/social-images/social-1778616584032-IMG-20251214-WA0021.webp" },
     ],
     links: [
       {
