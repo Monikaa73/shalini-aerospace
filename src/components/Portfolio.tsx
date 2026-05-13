@@ -407,12 +407,12 @@ function Contact() {
         <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }}
           className="space-y-4">
           {[
-            { I: Mail, l: "Email", v: "shalinikumar@example.com" },
-            { I: Phone, l: "Phone", v: "+91 00000 00000" },
-            { I: MapPin, l: "Location", v: "Thanjavur, Tamil Nadu, India" },
-            { I: Linkedin, l: "LinkedIn", v: "/in/shalini-kumar" },
-          ].map(({ I, l, v }) => (
-            <div key={l} className="glass rounded-xl p-5 flex items-center gap-4 hover:border-accent/40 transition group">
+            { I: Mail, l: "Email", v: "shalinikajol2004@gmail.com", h: "mailto:shalinikajol2004@gmail.com" },
+            { I: Phone, l: "Phone", v: "+91 9363282001", h: "tel:+919363282001" },
+            { I: MapPin, l: "Location", v: "Thanjavur, Tamil Nadu, India", h: undefined },
+            { I: Linkedin, l: "LinkedIn", v: "/in/shalini-kumar-7b9248293", h: "https://www.linkedin.com/in/shalini-kumar-7b9248293/" },
+          ].map(({ I, l, v, h }) => (
+            <a key={l} href={h ?? "#"} target={h?.startsWith("http") ? "_blank" : undefined} rel={h?.startsWith("http") ? "noopener noreferrer" : undefined} className="glass rounded-xl p-5 flex items-center gap-4 hover:border-accent/40 transition group">
               <div className="w-11 h-11 rounded-lg bg-gradient-primary flex items-center justify-center shadow-glow group-hover:scale-110 transition">
                 <I className="w-5 h-5 text-primary-foreground" />
               </div>
@@ -420,11 +420,15 @@ function Contact() {
                 <div className="text-xs uppercase tracking-wider text-muted-foreground">{l}</div>
                 <div className="text-foreground">{v}</div>
               </div>
-            </div>
+            </a>
           ))}
           <div className="flex gap-3 pt-2">
-            {[Linkedin, Github, Mail].map((I, i) => (
-              <a key={i} href="#" className="w-11 h-11 rounded-full glass flex items-center justify-center text-accent hover:shadow-cyan hover:bg-accent/10 transition">
+            {[
+              { I: Linkedin, h: "https://www.linkedin.com/in/shalini-kumar-7b9248293/", ext: true },
+              { I: Phone, h: "tel:+919363282001", ext: false },
+              { I: Mail, h: "mailto:shalinikajol2004@gmail.com", ext: false },
+            ].map(({ I, h, ext }, i) => (
+              <a key={i} href={h} target={ext ? "_blank" : undefined} rel={ext ? "noopener noreferrer" : undefined} className="w-11 h-11 rounded-full glass flex items-center justify-center text-accent hover:shadow-cyan hover:bg-accent/10 transition">
                 <I className="w-5 h-5" />
               </a>
             ))}
